@@ -1,0 +1,379 @@
+// Point Netlist Generated on: Dec 14 01:36:03 2022
+// Generated for: spectre
+// Design Netlist Generated on: Dec 14 01:34:42 2022
+// Design library name: Project
+// Design cell name: sim_Design
+// Design view name: config
+simulator lang=spectre
+global 0 vdd!
+include "/home/angelinic0/ncsu-cdk-1.6.0.beta/models/spectre/standalone/ami06N.m"
+include "/home/angelinic0/ncsu-cdk-1.6.0.beta/models/spectre/standalone/ami06P.m"
+
+// Inherited view list: spectre cmos_sch cmos.sch schematic veriloga ahdl
+// pspice dspf
+// Library name: Project
+// Cell name: Design
+// View name: extracted
+// View type: maskLayout
+subckt Design CLEAR CLK D PRESET Q Q_NOT CLK_NOT MASTER_Q MASTER_QNOT
+    \+67 (vdd! 27 Q_NOT vdd!) ami06P w=1.17e-05 l=6e-07 as=1.053e-11 \
+        ad=1.755e-11 ps=1.8e-06 pd=1.47e-05 m=1 region=sat
+    \+66 (vdd! Q_NOT Q vdd!) ami06P w=1.17e-05 l=6e-07 as=1.053e-11 \
+        ad=1.755e-11 ps=1.8e-06 pd=1.47e-05 m=1 region=sat
+    \+65 (Q_NOT 27 vdd! vdd!) ami06P w=1.17e-05 l=6e-07 as=1.053e-11 \
+        ad=1.053e-11 ps=1.8e-06 pd=1.8e-06 m=1 region=sat
+    \+64 (Q Q_NOT vdd! vdd!) ami06P w=1.17e-05 l=6e-07 as=1.053e-11 \
+        ad=1.053e-11 ps=1.8e-06 pd=1.8e-06 m=1 region=sat
+    \+63 (vdd! Q Q_NOT vdd!) ami06P w=1.17e-05 l=6e-07 as=1.053e-11 \
+        ad=1.053e-11 ps=1.8e-06 pd=1.8e-06 m=1 region=sat
+    \+62 (vdd! 26 Q vdd!) ami06P w=1.17e-05 l=6e-07 as=1.053e-11 \
+        ad=1.053e-11 ps=1.8e-06 pd=1.8e-06 m=1 region=sat
+    \+61 (Q_NOT Q vdd! vdd!) ami06P w=1.17e-05 l=6e-07 as=1.755e-11 \
+        ad=1.053e-11 ps=1.47e-05 pd=1.8e-06 m=1 region=sat
+    \+60 (Q 26 vdd! vdd!) ami06P w=1.17e-05 l=6e-07 as=1.755e-11 \
+        ad=1.053e-11 ps=1.47e-05 pd=1.8e-06 m=1 region=sat
+    \+265 (0 27) capacitor c=1.70748e-15 m=1
+    \+264 (0 26) capacitor c=8.0352e-16 m=1
+    \+263 (0 20) capacitor c=1.3392e-15 m=1
+    \+262 (0 19) capacitor c=1.9251e-15 m=1
+    \+261 (0 16) capacitor c=7.7004e-16 m=1
+    \+260 (0 15) capacitor c=1.62378e-15 m=1
+    \+259 (0 14) capacitor c=2.14272e-15 m=1
+    \+258 (0 13) capacitor c=1.77444e-15 m=1
+    \+257 (0 12) capacitor c=1.48986e-15 m=1
+    \+256 (MASTER_QNOT 0) capacitor c=2.12598e-15 m=1
+    \+255 (Q 0) capacitor c=1.69074e-15 m=1
+    \+254 (CLK 0) capacitor c=1.1718e-15 m=1
+    \+253 (D 0) capacitor c=1.2555e-15 m=1
+    \+252 (vdd! 27) capacitor c=2.6784e-16 m=1
+    \+251 (vdd! 26) capacitor c=4.7709e-16 m=1
+    \+250 (vdd! 20) capacitor c=1.31409e-15 m=1
+    \+249 (vdd! 19) capacitor c=1.24713e-15 m=1
+    \+248 (vdd! 16) capacitor c=6.696e-16 m=1
+    \+247 (vdd! 15) capacitor c=6.1938e-16 m=1
+    \+246 (vdd! 14) capacitor c=1.27224e-15 m=1
+    \+245 (vdd! 13) capacitor c=1.78281e-15 m=1
+    \+244 (vdd! 12) capacitor c=7.9515e-16 m=1
+    \+243 (vdd! MASTER_QNOT) capacitor c=1.14669e-15 m=1
+    \+242 (vdd! Q) capacitor c=2.6784e-16 m=1
+    \+241 (vdd! CLK) capacitor c=5.5242e-16 m=1
+    \+240 (vdd! D) capacitor c=7.1982e-16 m=1
+    \+239 (MASTER_Q 0) capacitor c=2.87928e-15 m=1
+    \+238 (MASTER_Q vdd!) capacitor c=2.05065e-15 m=1
+    \+237 (Q_NOT 0) capacitor c=9.0396e-16 m=1
+    \+236 (Q_NOT vdd!) capacitor c=2.6784e-16 m=1
+    \+235 (CLEAR 0) capacitor c=8.8722e-16 m=1
+    \+234 (CLEAR vdd!) capacitor c=6.5286e-16 m=1
+    \+233 (CLK_NOT 0) capacitor c=2.77884e-15 m=1
+    \+232 (CLK_NOT vdd!) capacitor c=1.674e-15 m=1
+    \+231 (PRESET 0) capacitor c=1.22202e-15 m=1
+    \+230 (PRESET vdd!) capacitor c=6.5286e-16 m=1
+    \+229 (16 20) capacitor c=2.217e-16 m=1
+    \+228 (15 27) capacitor c=2.217e-16 m=1
+    \+227 (15 26) capacitor c=4.60125e-16 m=1
+    \+226 (0 27) capacitor c=1.47143e-14 m=1
+    \+225 (0 26) capacitor c=1.25907e-14 m=1
+    \+224 (0 20) capacitor c=1.38309e-14 m=1
+    \+223 (0 19) capacitor c=1.62241e-14 m=1
+    \+222 (0 16) capacitor c=1.40266e-14 m=1
+    \+221 (0 15) capacitor c=1.36384e-14 m=1
+    \+220 (0 14) capacitor c=1.53817e-14 m=1
+    \+219 (0 13) capacitor c=1.39148e-14 m=1
+    \+218 (0 12) capacitor c=1.52107e-14 m=1
+    \+217 (MASTER_QNOT 19) capacitor c=4.434e-16 m=1
+    \+216 (MASTER_QNOT 12) capacitor c=2.217e-16 m=1
+    \+215 (MASTER_QNOT 0) capacitor c=1.56827e-14 m=1
+    \+214 (Q 26) capacitor c=4.434e-16 m=1
+    \+213 (Q 0) capacitor c=1.40339e-14 m=1
+    \+212 (vdd! 27) capacitor c=7.9626e-16 m=1
+    \+211 (vdd! 26) capacitor c=7.9626e-16 m=1
+    \+210 (vdd! 20) capacitor c=2.24622e-15 m=1
+    \+209 (vdd! 19) capacitor c=2.24622e-15 m=1
+    \+208 (vdd! 16) capacitor c=2.20398e-15 m=1
+    \+207 (vdd! 15) capacitor c=1.30926e-15 m=1
+    \+206 (vdd! 14) capacitor c=2.0265e-15 m=1
+    \+205 (vdd! 13) capacitor c=2.4237e-15 m=1
+    \+204 (vdd! 12) capacitor c=1.80282e-15 m=1
+    \+203 (vdd! 0) capacitor c=1.69256e-14 m=1
+    \+202 (vdd! MASTER_QNOT) capacitor c=3.81714e-15 m=1
+    \+201 (vdd! Q) capacitor c=1.45236e-15 m=1
+    \+200 (MASTER_Q 20) capacitor c=2.217e-16 m=1
+    \+199 (MASTER_Q 0) capacitor c=1.3247e-14 m=1
+    \+198 (MASTER_Q MASTER_QNOT) capacitor c=2.217e-16 m=1
+    \+197 (MASTER_Q vdd!) capacitor c=4.32942e-15 m=1
+    \+196 (Q_NOT 27) capacitor c=4.434e-16 m=1
+    \+195 (Q_NOT 0) capacitor c=2.56208e-14 m=1
+    \+194 (Q_NOT Q) capacitor c=8.868e-16 m=1
+    \+193 (Q_NOT vdd!) capacitor c=1.82352e-15 m=1
+    \+192 (CLK_NOT 19) capacitor c=2.217e-16 m=1
+    \+191 (CLK_NOT 0) capacitor c=2.63473e-14 m=1
+    \+190 (CLK_NOT vdd!) capacitor c=1.4673e-15 m=1
+    \+189 (27 28) capacitor c=3.7008e-16 m=1
+    \+188 (26 29) capacitor c=3.7008e-16 m=1
+    \+187 (22 24) capacitor c=6.744e-16 m=1
+    \+186 (21 23) capacitor c=6.744e-16 m=1
+    \+185 (20 26) capacitor c=4.5828e-16 m=1
+    \+184 (20 22) capacitor c=3.7008e-16 m=1
+    \+183 (19 27) capacitor c=4.5828e-16 m=1
+    \+182 (19 21) capacitor c=3.7008e-16 m=1
+    \+181 (16 26) capacitor c=4.5828e-16 m=1
+    \+180 (16 20) capacitor c=4.5828e-16 m=1
+    \+179 (15 27) capacitor c=2.2914e-16 m=1
+    \+178 (15 26) capacitor c=4.5828e-16 m=1
+    \+177 (15 20) capacitor c=4.5828e-16 m=1
+    \+176 (15 19) capacitor c=2.2914e-16 m=1
+    \+175 (15 16) capacitor c=4.5828e-16 m=1
+    \+174 (14 27) capacitor c=4.5828e-16 m=1
+    \+173 (14 26) capacitor c=2.2914e-16 m=1
+    \+172 (14 20) capacitor c=2.2914e-16 m=1
+    \+171 (14 19) capacitor c=4.5828e-16 m=1
+    \+170 (14 16) capacitor c=2.2914e-16 m=1
+    \+169 (14 15) capacitor c=4.5828e-16 m=1
+    \+168 (13 26) capacitor c=4.5828e-16 m=1
+    \+167 (13 20) capacitor c=6.1116e-16 m=1
+    \+166 (13 16) capacitor c=4.5828e-16 m=1
+    \+165 (13 15) capacitor c=4.5828e-16 m=1
+    \+164 (13 14) capacitor c=2.2914e-16 m=1
+    \+163 (12 27) capacitor c=4.5828e-16 m=1
+    \+162 (12 23) capacitor c=3.7008e-16 m=1
+    \+161 (12 21) capacitor c=3.7008e-16 m=1
+    \+160 (12 19) capacitor c=6.1116e-16 m=1
+    \+159 (12 15) capacitor c=9.1656e-16 m=1
+    \+158 (12 14) capacitor c=6.8742e-16 m=1
+    \+157 (0 29) capacitor c=3.372e-16 m=1
+    \+156 (0 28) capacitor c=3.372e-16 m=1
+    \+155 (0 27) capacitor c=2.75538e-15 m=1
+    \+154 (0 26) capacitor c=2.6835e-16 m=1
+    \+153 (0 20) capacitor c=5.5371e-16 m=1
+    \+152 (0 19) capacitor c=2.0467e-15 m=1
+    \+151 (0 16) capacitor c=1.12443e-15 m=1
+    \+150 (0 15) capacitor c=4.51748e-15 m=1
+    \+149 (0 14) capacitor c=7.24961e-15 m=1
+    \+148 (0 13) capacitor c=1.98051e-15 m=1
+    \+147 (0 12) capacitor c=4.36053e-15 m=1
+    \+146 (MASTER_QNOT 27) capacitor c=4.5828e-16 m=1
+    \+145 (MASTER_QNOT 26) capacitor c=2.2914e-16 m=1
+    \+144 (MASTER_QNOT 24) capacitor c=3.7008e-16 m=1
+    \+143 (MASTER_QNOT 23) capacitor c=3.372e-16 m=1
+    \+142 (MASTER_QNOT 22) capacitor c=3.7008e-16 m=1
+    \+141 (MASTER_QNOT 21) capacitor c=3.372e-16 m=1
+    \+140 (MASTER_QNOT 20) capacitor c=3.2166e-16 m=1
+    \+139 (MASTER_QNOT 19) capacitor c=4.5828e-16 m=1
+    \+138 (MASTER_QNOT 16) capacitor c=2.2914e-16 m=1
+    \+137 (MASTER_QNOT 15) capacitor c=9.1656e-16 m=1
+    \+136 (MASTER_QNOT 14) capacitor c=6.8742e-16 m=1
+    \+135 (MASTER_QNOT 13) capacitor c=1.00908e-15 m=1
+    \+134 (MASTER_QNOT 12) capacitor c=4.5828e-16 m=1
+    \+133 (MASTER_QNOT 0) capacitor c=6.91892e-15 m=1
+    \+132 (Q 29) capacitor c=3.372e-16 m=1
+    \+131 (Q 28) capacitor c=3.7008e-16 m=1
+    \+130 (Q 27) capacitor c=6.8742e-16 m=1
+    \+129 (Q 26) capacitor c=2.2914e-16 m=1
+    \+128 (Q 20) capacitor c=2.2914e-16 m=1
+    \+127 (Q 19) capacitor c=6.8742e-16 m=1
+    \+126 (Q 16) capacitor c=2.2914e-16 m=1
+    \+125 (Q 15) capacitor c=4.5828e-16 m=1
+    \+124 (Q 14) capacitor c=6.8742e-16 m=1
+    \+123 (Q 13) capacitor c=2.2914e-16 m=1
+    \+122 (Q 12) capacitor c=6.8742e-16 m=1
+    \+121 (Q 0) capacitor c=3.04567e-15 m=1
+    \+120 (Q MASTER_QNOT) capacitor c=6.8742e-16 m=1
+    \+119 (vdd! 26) capacitor c=1.75744e-15 m=1
+    \+118 (vdd! 20) capacitor c=1.89363e-15 m=1
+    \+117 (vdd! 16) capacitor c=3.78385e-15 m=1
+    \+116 (vdd! 15) capacitor c=4.8392e-15 m=1
+    \+115 (vdd! 14) capacitor c=2.14335e-15 m=1
+    \+114 (vdd! 13) capacitor c=3.23504e-15 m=1
+    \+113 (vdd! 0) capacitor c=3.1776e-16 m=1
+    \+112 (vdd! MASTER_QNOT) capacitor c=2.14725e-15 m=1
+    \+111 (vdd! Q) capacitor c=1.03032e-15 m=1
+    \+110 (MASTER_Q 27) capacitor c=2.2914e-16 m=1
+    \+109 (MASTER_Q 26) capacitor c=4.5828e-16 m=1
+    \+108 (MASTER_Q 24) capacitor c=3.372e-16 m=1
+    \+107 (MASTER_Q 22) capacitor c=3.372e-16 m=1
+    \+106 (MASTER_Q 20) capacitor c=1.55814e-15 m=1
+    \+105 (MASTER_Q 19) capacitor c=3.8202e-16 m=1
+    \+104 (MASTER_Q 16) capacitor c=4.5828e-16 m=1
+    \+103 (MASTER_Q 15) capacitor c=6.8742e-16 m=1
+    \+102 (MASTER_Q 14) capacitor c=4.5828e-16 m=1
+    \+101 (MASTER_Q 13) capacitor c=1.88846e-15 m=1
+    \+100 (MASTER_Q 12) capacitor c=3.8202e-16 m=1
+    \+99 (MASTER_Q 0) capacitor c=5.63718e-15 m=1
+    \+98 (MASTER_Q MASTER_QNOT) capacitor c=1.38702e-15 m=1
+    \+97 (MASTER_Q Q) capacitor c=4.5828e-16 m=1
+    \+96 (MASTER_Q vdd!) capacitor c=3.80227e-15 m=1
+    \+95 (Q_NOT 29) capacitor c=3.7008e-16 m=1
+    \+94 (Q_NOT 28) capacitor c=3.372e-16 m=1
+    \+93 (Q_NOT 26) capacitor c=2.2914e-16 m=1
+    \+92 (Q_NOT 20) capacitor c=2.2914e-16 m=1
+    \+91 (Q_NOT 16) capacitor c=4.5828e-16 m=1
+    \+90 (Q_NOT 15) capacitor c=4.5828e-16 m=1
+    \+89 (Q_NOT 14) capacitor c=2.2914e-16 m=1
+    \+88 (Q_NOT 13) capacitor c=4.5828e-16 m=1
+    \+87 (Q_NOT 0) capacitor c=7.76235e-16 m=1
+    \+86 (Q_NOT MASTER_QNOT) capacitor c=2.2914e-16 m=1
+    \+85 (Q_NOT Q) capacitor c=4.5828e-16 m=1
+    \+84 (Q_NOT vdd!) capacitor c=3.2085e-15 m=1
+    \+83 (Q_NOT MASTER_Q) capacitor c=4.5828e-16 m=1
+    \+82 (CLK_NOT 27) capacitor c=6.8742e-16 m=1
+    \+81 (CLK_NOT 26) capacitor c=4.5828e-16 m=1
+    \+80 (CLK_NOT 20) capacitor c=4.5828e-16 m=1
+    \+79 (CLK_NOT 19) capacitor c=2.25433e-15 m=1
+    \+78 (CLK_NOT 16) capacitor c=4.5828e-16 m=1
+    \+77 (CLK_NOT 15) capacitor c=9.1656e-16 m=1
+    \+76 (CLK_NOT 14) capacitor c=9.1656e-16 m=1
+    \+75 (CLK_NOT 13) capacitor c=4.5828e-16 m=1
+    \+74 (CLK_NOT 12) capacitor c=1.37484e-15 m=1
+    \+73 (CLK_NOT 0) capacitor c=6.87544e-15 m=1
+    \+72 (CLK_NOT MASTER_QNOT) capacitor c=1.37484e-15 m=1
+    \+71 (CLK_NOT Q) capacitor c=6.8742e-16 m=1
+    \+70 (CLK_NOT vdd!) capacitor c=4.95135e-15 m=1
+    \+69 (CLK_NOT MASTER_Q) capacitor c=9.1656e-16 m=1
+    \+68 (CLK_NOT Q_NOT) capacitor c=4.5828e-16 m=1
+    \+33 (28 27 0 0) ami06N w=1.17e-05 l=6e-07 as=1.053e-11 ad=1.755e-11 \
+        ps=1.8e-06 pd=1.47e-05 m=1 region=sat
+    \+32 (29 Q_NOT 0 0) ami06N w=1.17e-05 l=6e-07 as=1.053e-11 \
+        ad=1.755e-11 ps=1.8e-06 pd=1.47e-05 m=1 region=sat
+    \+31 (0 27 28 0) ami06N w=1.17e-05 l=6e-07 as=1.053e-11 ad=1.053e-11 \
+        ps=1.8e-06 pd=1.8e-06 m=1 region=sat
+    \+30 (0 Q_NOT 29 0) ami06N w=1.17e-05 l=6e-07 as=1.053e-11 \
+        ad=1.053e-11 ps=1.8e-06 pd=1.8e-06 m=1 region=sat
+    \+29 (28 Q Q_NOT 0) ami06N w=1.17e-05 l=6e-07 as=1.053e-11 \
+        ad=1.053e-11 ps=1.8e-06 pd=1.8e-06 m=1 region=sat
+    \+28 (29 26 Q 0) ami06N w=1.17e-05 l=6e-07 as=1.053e-11 ad=1.053e-11 \
+        ps=1.8e-06 pd=1.8e-06 m=1 region=sat
+    \+27 (Q 26 29 0) ami06N w=1.17e-05 l=6e-07 as=1.755e-11 ad=1.053e-11 \
+        ps=1.47e-05 pd=1.8e-06 m=1 region=sat
+    \+26 (Q_NOT Q 28 0) ami06N w=1.17e-05 l=6e-07 as=1.755e-11 \
+        ad=1.053e-11 ps=1.47e-05 pd=1.8e-06 m=1 region=sat
+    \+25 (27 15 25 0) ami06N w=9.6e-06 l=6e-07 as=8.64e-12 ad=1.44e-11 \
+        ps=1.8e-06 pd=1.26e-05 m=1 region=sat
+    \+24 (26 15 30 0) ami06N w=9.6e-06 l=6e-07 as=4.32e-12 ad=1.44e-11 \
+        ps=9e-07 pd=1.26e-05 m=1 region=sat
+    \+23 (25 MASTER_QNOT 0 0) ami06N w=9.6e-06 l=6e-07 as=1.44e-11 \
+        ad=8.64e-12 ps=1.26e-05 pd=1.8e-06 m=1 region=sat
+    \+22 (30 MASTER_Q 0 0) ami06N w=9.6e-06 l=6e-07 as=1.44e-11 \
+        ad=4.32e-12 ps=1.26e-05 pd=9e-07 m=1 region=sat
+    \+21 (0 MASTER_Q 21 0) ami06N w=6e-06 l=6e-07 as=5.4e-12 ad=9e-12 \
+        ps=1.8e-06 pd=9e-06 m=1 region=sat
+    \+20 (0 13 22 0) ami06N w=6e-06 l=6e-07 as=5.4e-12 ad=9e-12 ps=1.8e-06 \
+        pd=9e-06 m=1 region=sat
+    \+19 (21 19 23 0) ami06N w=6e-06 l=6e-07 as=5.4e-12 ad=5.4e-12 \
+        ps=1.8e-06 pd=1.8e-06 m=1 region=sat
+    \+18 (22 20 24 0) ami06N w=6e-06 l=6e-07 as=5.4e-12 ad=5.4e-12 \
+        ps=1.8e-06 pd=1.8e-06 m=1 region=sat
+    \+17 (23 12 MASTER_QNOT 0) ami06N w=6e-06 l=6e-07 as=5.4e-12 \
+        ad=5.4e-12 ps=1.8e-06 pd=1.8e-06 m=1 region=sat
+    \+16 (24 MASTER_QNOT MASTER_Q 0) ami06N w=6e-06 l=6e-07 as=5.4e-12 \
+        ad=5.4e-12 ps=1.8e-06 pd=1.8e-06 m=1 region=sat
+    \+15 (MASTER_QNOT 12 23 0) ami06N w=6e-06 l=6e-07 as=5.4e-12 \
+        ad=5.4e-12 ps=1.8e-06 pd=1.8e-06 m=1 region=sat
+    \+14 (MASTER_Q MASTER_QNOT 24 0) ami06N w=6e-06 l=6e-07 as=5.4e-12 \
+        ad=5.4e-12 ps=1.8e-06 pd=1.8e-06 m=1 region=sat
+    \+13 (23 19 21 0) ami06N w=6e-06 l=6e-07 as=5.4e-12 ad=5.4e-12 \
+        ps=1.8e-06 pd=1.8e-06 m=1 region=sat
+    \+12 (24 20 22 0) ami06N w=6e-06 l=6e-07 as=5.4e-12 ad=5.4e-12 \
+        ps=1.8e-06 pd=1.8e-06 m=1 region=sat
+    \+11 (21 MASTER_Q 0 0) ami06N w=6e-06 l=6e-07 as=9e-12 ad=5.4e-12 \
+        ps=9e-06 pd=1.8e-06 m=1 region=sat
+    \+10 (22 13 0 0) ami06N w=6e-06 l=6e-07 as=9e-12 ad=5.4e-12 ps=9e-06 \
+        pd=1.8e-06 m=1 region=sat
+    \+9 (19 CLK_NOT 17 0) ami06N w=4.2e-06 l=6e-07 as=3.78e-12 ad=6.3e-12 \
+        ps=1.8e-06 pd=7.2e-06 m=1 region=sat
+    \+8 (20 16 18 0) ami06N w=4.2e-06 l=6e-07 as=3.78e-12 ad=6.3e-12 \
+        ps=1.8e-06 pd=7.2e-06 m=1 region=sat
+    \+7 (17 14 0 0) ami06N w=4.2e-06 l=6e-07 as=6.3e-12 ad=3.78e-12 \
+        ps=7.2e-06 pd=1.8e-06 m=1 region=sat
+    \+6 (18 CLK_NOT 0 0) ami06N w=4.2e-06 l=6e-07 as=6.3e-12 ad=3.78e-12 \
+        ps=7.2e-06 pd=1.8e-06 m=1 region=sat
+    \+5 (16 14 0 0) ami06N w=1.5e-06 l=6e-07 as=2.25e-12 ad=2.25e-12 \
+        ps=4.5e-06 pd=4.5e-06 m=1 region=sat
+    \+3 (14 D 0 0) ami06N w=1.5e-06 l=6e-07 as=2.25e-12 ad=2.25e-12 \
+        ps=4.5e-06 pd=4.5e-06 m=1 region=sat
+    \+4 (CLK_NOT CLK 0 0) ami06N w=3e-06 l=6e-07 as=4.5e-12 ad=4.5e-12 \
+        ps=6e-06 pd=6e-06 m=1 region=sat
+    \+2 (15 CLK_NOT 0 0) ami06N w=3.9e-06 l=6e-07 as=5.85e-12 ad=5.85e-12 \
+        ps=6.9e-06 pd=6.9e-06 m=1 region=sat
+    \+1 (12 PRESET 0 0) ami06N w=2.1e-06 l=6e-07 as=3.15e-12 ad=3.15e-12 \
+        ps=5.1e-06 pd=5.1e-06 m=1 region=sat
+    \+0 (13 CLEAR 0 0) ami06N w=2.1e-06 l=6e-07 as=3.15e-12 ad=3.15e-12 \
+        ps=5.1e-06 pd=5.1e-06 m=1 region=sat
+    \+59 (vdd! 15 27 vdd!) ami06P w=9.6e-06 l=6e-07 as=8.64e-12 \
+        ad=1.44e-11 ps=1.8e-06 pd=1.26e-05 m=1 region=sat
+    \+58 (vdd! 15 26 vdd!) ami06P w=9.6e-06 l=6e-07 as=8.64e-12 \
+        ad=1.44e-11 ps=1.8e-06 pd=1.26e-05 m=1 region=sat
+    \+57 (27 MASTER_QNOT vdd! vdd!) ami06P w=9.6e-06 l=6e-07 as=1.44e-11 \
+        ad=8.64e-12 ps=1.26e-05 pd=1.8e-06 m=1 region=sat
+    \+56 (26 MASTER_Q vdd! vdd!) ami06P w=9.6e-06 l=6e-07 as=1.44e-11 \
+        ad=8.64e-12 ps=1.26e-05 pd=1.8e-06 m=1 region=sat
+    \+55 (vdd! MASTER_Q MASTER_QNOT vdd!) ami06P w=4.05e-06 l=6e-07 \
+        as=3.645e-12 ad=6.075e-12 ps=1.8e-06 pd=7.05e-06 m=1 region=sat
+    \+54 (vdd! 13 MASTER_Q vdd!) ami06P w=4.05e-06 l=6e-07 as=3.645e-12 \
+        ad=6.075e-12 ps=1.8e-06 pd=7.05e-06 m=1 region=sat
+    \+53 (MASTER_QNOT 19 vdd! vdd!) ami06P w=4.05e-06 l=6e-07 as=3.645e-12 \
+        ad=3.645e-12 ps=1.8e-06 pd=1.8e-06 m=1 region=sat
+    \+52 (MASTER_Q 20 vdd! vdd!) ami06P w=4.05e-06 l=6e-07 as=3.645e-12 \
+        ad=3.645e-12 ps=1.8e-06 pd=1.8e-06 m=1 region=sat
+    \+51 (vdd! MASTER_QNOT MASTER_Q vdd!) ami06P w=4.05e-06 l=6e-07 \
+        as=3.645e-12 ad=3.645e-12 ps=1.8e-06 pd=1.8e-06 m=1 region=sat
+    \+50 (vdd! 12 MASTER_QNOT vdd!) ami06P w=4.05e-06 l=6e-07 as=3.645e-12 \
+        ad=3.645e-12 ps=1.8e-06 pd=1.8e-06 m=1 region=sat
+    \+49 (MASTER_QNOT 12 vdd! vdd!) ami06P w=4.05e-06 l=6e-07 as=3.645e-12 \
+        ad=3.645e-12 ps=1.8e-06 pd=1.8e-06 m=1 region=sat
+    \+48 (MASTER_Q MASTER_QNOT vdd! vdd!) ami06P w=4.05e-06 l=6e-07 \
+        as=3.645e-12 ad=3.645e-12 ps=1.8e-06 pd=1.8e-06 m=1 region=sat
+    \+47 (vdd! 19 MASTER_QNOT vdd!) ami06P w=4.05e-06 l=6e-07 as=3.645e-12 \
+        ad=3.645e-12 ps=1.8e-06 pd=1.8e-06 m=1 region=sat
+    \+46 (vdd! 20 MASTER_Q vdd!) ami06P w=4.05e-06 l=6e-07 as=3.645e-12 \
+        ad=3.645e-12 ps=1.8e-06 pd=1.8e-06 m=1 region=sat
+    \+45 (MASTER_QNOT MASTER_Q vdd! vdd!) ami06P w=4.05e-06 l=6e-07 \
+        as=6.075e-12 ad=3.645e-12 ps=7.05e-06 pd=1.8e-06 m=1 region=sat
+    \+44 (MASTER_Q 13 vdd! vdd!) ami06P w=4.05e-06 l=6e-07 as=6.075e-12 \
+        ad=3.645e-12 ps=7.05e-06 pd=1.8e-06 m=1 region=sat
+    \+43 (vdd! CLK_NOT 19 vdd!) ami06P w=4.2e-06 l=6e-07 as=3.78e-12 \
+        ad=6.3e-12 ps=1.8e-06 pd=7.2e-06 m=1 region=sat
+    \+42 (vdd! 16 20 vdd!) ami06P w=4.2e-06 l=6e-07 as=3.78e-12 ad=6.3e-12 \
+        ps=1.8e-06 pd=7.2e-06 m=1 region=sat
+    \+41 (19 14 vdd! vdd!) ami06P w=4.2e-06 l=6e-07 as=6.3e-12 ad=3.78e-12 \
+        ps=7.2e-06 pd=1.8e-06 m=1 region=sat
+    \+40 (20 CLK_NOT vdd! vdd!) ami06P w=4.2e-06 l=6e-07 as=6.3e-12 \
+        ad=3.78e-12 ps=7.2e-06 pd=1.8e-06 m=1 region=sat
+    \+35 (12 PRESET vdd! vdd!) ami06P w=4.2e-06 l=6e-07 as=6.3e-12 \
+        ad=6.3e-12 ps=7.2e-06 pd=7.2e-06 m=1 region=sat
+    \+34 (13 CLEAR vdd! vdd!) ami06P w=4.2e-06 l=6e-07 as=6.3e-12 \
+        ad=6.3e-12 ps=7.2e-06 pd=7.2e-06 m=1 region=sat
+    \+38 (16 14 vdd! vdd!) ami06P w=3e-06 l=6e-07 as=4.5e-12 ad=4.5e-12 \
+        ps=6e-06 pd=6e-06 m=1 region=sat
+    \+37 (14 D vdd! vdd!) ami06P w=3e-06 l=6e-07 as=4.5e-12 ad=4.5e-12 \
+        ps=6e-06 pd=6e-06 m=1 region=sat
+    \+39 (CLK_NOT CLK vdd! vdd!) ami06P w=6e-06 l=6e-07 as=9e-12 ad=9e-12 \
+        ps=9e-06 pd=9e-06 m=1 region=sat
+    \+36 (15 CLK_NOT vdd! vdd!) ami06P w=7.8e-06 l=6e-07 as=1.17e-11 \
+        ad=1.17e-11 ps=1.08e-05 pd=1.08e-05 m=1 region=sat
+ends Design
+// End of subcircuit definition.
+
+// Library name: Project
+// Cell name: sim_Design
+// View name: schematic
+// Inherited view list: spectre cmos_sch cmos.sch schematic veriloga ahdl
+// pspice dspf
+I4 (CLEAR CLK D PRESET Q Q_NOT CLK_NOT MASTER_Q MASTER_QNOT) Design
+C1 (Q 0) capacitor c=228.8368978f m=1
+C0 (Q_NOT 0) capacitor c=228.8368978f m=1
+include "./_graphical_stimuli.scs"
+simulatorOptions options psfversion="1.4.0" reltol=1e-3 vabstol=1e-6 \
+    iabstol=1e-12 temp=27 tnom=27 scalem=1.0 scale=1.0 gmin=1e-12 rforce=1 \
+    maxnotes=5 maxwarns=5 digits=5 cols=80 pivrel=1e-3 \
+    sensfile="../psf/sens.output" checklimitdest=psf 
+tran tran stop=24n write="spectre.ic" writefinal="spectre.fc" \
+    annotate=status maxiters=5 
+finalTimeOP info what=oppoint where=rawfile
+modelParameter info what=models where=rawfile
+element info what=inst where=rawfile
+outputParameter info what=output where=rawfile
+designParamVals info what=parameters where=rawfile
+primitives info what=primitives where=rawfile
+subckts info what=subckts where=rawfile
+save CLK D MASTER_Q MASTER_QNOT CLK_NOT Q_NOT Q Q CLK_NOT MASTER_Q D 
+saveOptions options save=allpub

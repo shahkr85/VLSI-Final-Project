@@ -1,0 +1,182 @@
+// Point Netlist Generated on: Dec 14 00:44:53 2022
+// Generated for: spectre
+// Design Netlist Generated on: Dec 14 00:44:53 2022
+// Design library name: Project
+// Design cell name: FlipFlopTest
+// Design view name: schematic
+simulator lang=spectre
+global 0 vdd!
+include "/home/angelinic0/ncsu-cdk-1.6.0.beta/models/spectre/standalone/ami06N.m"
+include "/home/angelinic0/ncsu-cdk-1.6.0.beta/models/spectre/standalone/ami06P.m"
+
+// Library name: Project
+// Cell name: V_INV
+// View name: schematic
+subckt V_INV in out
+    N0 (out in 0 0) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 ps=6u \
+        pd=6u m=1 region=sat
+    P0 (out in vdd! vdd!) ami06P w=3u l=600n as=4.5e-12 ad=4.5e-12 ps=9u \
+        pd=9u m=1 region=sat
+ends V_INV
+// End of subcircuit definition.
+
+// Library name: Project
+// Cell name: W_2NAND
+// View name: schematic
+subckt W_2NAND A B out
+    P1 (out B vdd! vdd!) ami06P w=4.2u l=600n as=6.3e-12 ad=6.3e-12 \
+        ps=11.4u pd=11.4u m=1 region=sat
+    P0 (out A vdd! vdd!) ami06P w=4.2u l=600n as=6.3e-12 ad=6.3e-12 \
+        ps=11.4u pd=11.4u m=1 region=sat
+    N1 (net1 B 0 0) ami06N w=4.2u l=600n as=6.3e-12 ad=6.3e-12 ps=11.4u \
+        pd=11.4u m=1 region=sat
+    N0 (out A net1 0) ami06N w=4.2u l=600n as=6.3e-12 ad=6.3e-12 ps=11.4u \
+        pd=11.4u m=1 region=sat
+ends W_2NAND
+// End of subcircuit definition.
+
+// Library name: Project
+// Cell name: X_3NAND
+// View name: schematic
+subckt X_3NAND A B C out
+    P5 (out C vdd! vdd!) ami06P w=4.05u l=600n as=6.075e-12 ad=6.075e-12 \
+        ps=11.1u pd=11.1u m=1 region=sat
+    P4 (out C vdd! vdd!) ami06P w=4.05u l=600n as=6.075e-12 ad=6.075e-12 \
+        ps=11.1u pd=11.1u m=1 region=sat
+    P3 (out B vdd! vdd!) ami06P w=4.05u l=600n as=6.075e-12 ad=6.075e-12 \
+        ps=11.1u pd=11.1u m=1 region=sat
+    P2 (out B vdd! vdd!) ami06P w=4.05u l=600n as=6.075e-12 ad=6.075e-12 \
+        ps=11.1u pd=11.1u m=1 region=sat
+    P1 (out A vdd! vdd!) ami06P w=4.05u l=600n as=6.075e-12 ad=6.075e-12 \
+        ps=11.1u pd=11.1u m=1 region=sat
+    P0 (out A vdd! vdd!) ami06P w=4.05u l=600n as=6.075e-12 ad=6.075e-12 \
+        ps=11.1u pd=11.1u m=1 region=sat
+    N5 (net2 C 0 0) ami06N w=6u l=600n as=9e-12 ad=9e-12 ps=15.0u pd=15.0u \
+        m=1 region=sat
+    N4 (net1 B net2 0) ami06N w=6u l=600n as=9e-12 ad=9e-12 ps=15.0u \
+        pd=15.0u m=1 region=sat
+    N3 (out A net1 0) ami06N w=6u l=600n as=9e-12 ad=9e-12 ps=15.0u \
+        pd=15.0u m=1 region=sat
+    N2 (net2 C 0 0) ami06N w=6u l=600n as=9e-12 ad=9e-12 ps=15.0u pd=15.0u \
+        m=1 region=sat
+    N1 (net1 B net2 0) ami06N w=6u l=600n as=9e-12 ad=9e-12 ps=15.0u \
+        pd=15.0u m=1 region=sat
+    N0 (out A net1 0) ami06N w=6u l=600n as=9e-12 ad=9e-12 ps=15.0u \
+        pd=15.0u m=1 region=sat
+ends X_3NAND
+// End of subcircuit definition.
+
+// Library name: Project
+// Cell name: Z_2NAND
+// View name: schematic
+subckt Z_2NAND A B out
+    P3 (out B vdd! vdd!) ami06P w=11.7u l=600n as=1.755e-11 ad=1.755e-11 \
+        ps=26.4u pd=26.4u m=1 region=sat
+    P2 (out B vdd! vdd!) ami06P w=11.7u l=600n as=1.755e-11 ad=1.755e-11 \
+        ps=26.4u pd=26.4u m=1 region=sat
+    P1 (out A vdd! vdd!) ami06P w=11.7u l=600n as=1.755e-11 ad=1.755e-11 \
+        ps=26.4u pd=26.4u m=1 region=sat
+    P0 (out A vdd! vdd!) ami06P w=11.7u l=600n as=1.755e-11 ad=1.755e-11 \
+        ps=26.4u pd=26.4u m=1 region=sat
+    N3 (net1 B 0 0) ami06N w=11.7u l=600n as=1.755e-11 ad=1.755e-11 \
+        ps=26.4u pd=26.4u m=1 region=sat
+    N2 (out A net1 0) ami06N w=11.7u l=600n as=1.755e-11 ad=1.755e-11 \
+        ps=26.4u pd=26.4u m=1 region=sat
+    N1 (net1 B 0 0) ami06N w=11.7u l=600n as=1.755e-11 ad=1.755e-11 \
+        ps=26.4u pd=26.4u m=1 region=sat
+    N0 (out A net1 0) ami06N w=11.7u l=600n as=1.755e-11 ad=1.755e-11 \
+        ps=26.4u pd=26.4u m=1 region=sat
+ends Z_2NAND
+// End of subcircuit definition.
+
+// Library name: Project
+// Cell name: Y_2NAND
+// View name: schematic
+subckt Y_2NAND A B out
+    P1 (out B vdd! vdd!) ami06P w=9.6u l=600n as=1.44e-11 ad=1.44e-11 \
+        ps=22.2u pd=22.2u m=1 region=sat
+    P0 (out A vdd! vdd!) ami06P w=9.6u l=600n as=1.44e-11 ad=1.44e-11 \
+        ps=22.2u pd=22.2u m=1 region=sat
+    N1 (net1 B 0 0) ami06N w=9.6u l=600n as=1.44e-11 ad=1.44e-11 ps=22.2u \
+        pd=22.2u m=1 region=sat
+    N0 (out A net1 0) ami06N w=9.6u l=600n as=1.44e-11 ad=1.44e-11 \
+        ps=22.2u pd=22.2u m=1 region=sat
+ends Y_2NAND
+// End of subcircuit definition.
+
+// Library name: Project
+// Cell name: PresetClear
+// View name: schematic
+subckt PresetClear in out
+    N0 (out in 0 0) ami06N w=2.1u l=600n as=3.15e-12 ad=3.15e-12 ps=7.2u \
+        pd=7.2u m=1 region=sat
+    P0 (out in vdd! vdd!) ami06P w=4.2u l=600n as=6.3e-12 ad=6.3e-12 \
+        ps=11.4u pd=11.4u m=1 region=sat
+ends PresetClear
+// End of subcircuit definition.
+
+// Library name: Project
+// Cell name: ClockMaster
+// View name: schematic
+subckt ClockMaster in out
+    N0 (out in 0 0) ami06N w=3u l=600n as=4.5e-12 ad=4.5e-12 ps=9u pd=9u \
+        m=1 region=sat
+    P0 (out in vdd! vdd!) ami06P w=6u l=600n as=9e-12 ad=9e-12 ps=15.0u \
+        pd=15.0u m=1 region=sat
+ends ClockMaster
+// End of subcircuit definition.
+
+// Library name: Project
+// Cell name: ClockSlave
+// View name: schematic
+subckt ClockSlave in out
+    N0 (out in 0 0) ami06N w=3.9u l=600n as=5.85e-12 ad=5.85e-12 ps=10.8u \
+        pd=10.8u m=1 region=sat
+    P0 (out in vdd! vdd!) ami06P w=7.8u l=600n as=1.17e-11 ad=1.17e-11 \
+        ps=18.6u pd=18.6u m=1 region=sat
+ends ClockSlave
+// End of subcircuit definition.
+
+// Library name: Project
+// Cell name: Design
+// View name: schematic
+subckt Design CLEAR CLK D PRESET Q Q_NOT CLK_NOT MASTER_Q MASTER_QNOT
+    I25 (net1 net4) V_INV
+    I34 (D net1) V_INV
+    I22 (CLK_NOT net4 net5) W_2NAND
+    I21 (net1 CLK_NOT net3) W_2NAND
+    I20 (MASTER_QNOT net5 net6 MASTER_Q) X_3NAND
+    I19 (net2 net3 MASTER_Q MASTER_QNOT) X_3NAND
+    I31 (Q_NOT net11 Q) Z_2NAND
+    I30 (net10 Q Q_NOT) Z_2NAND
+    I18 (MASTER_Q net7 net11) Y_2NAND
+    I17 (MASTER_QNOT net7 net10) Y_2NAND
+    I44 (CLEAR net6) PresetClear
+    I43 (PRESET net2) PresetClear
+    I45 (CLK CLK_NOT) ClockMaster
+    I46 (CLK_NOT net7) ClockSlave
+ends Design
+// End of subcircuit definition.
+
+// Library name: Project
+// Cell name: FlipFlopTest
+// View name: schematic
+I0 (CLEAR CLK D PRESET Q Q_NOT CLK_NOT MASTER_Q MASTER_QNOT) Design
+C1 (Q 0) capacitor c=228.8368978f m=1
+C0 (Q_NOT 0) capacitor c=228.8368978f m=1
+include "./_graphical_stimuli.scs"
+simulatorOptions options psfversion="1.4.0" reltol=1e-3 vabstol=1e-6 \
+    iabstol=1e-12 temp=27 tnom=27 scalem=1.0 scale=1.0 gmin=1e-12 rforce=1 \
+    maxnotes=5 maxwarns=5 digits=5 cols=80 pivrel=1e-3 \
+    sensfile="../psf/sens.output" checklimitdest=psf 
+tran tran stop=24n write="spectre.ic" writefinal="spectre.fc" \
+    annotate=status maxiters=5 
+finalTimeOP info what=oppoint where=rawfile
+modelParameter info what=models where=rawfile
+element info what=inst where=rawfile
+outputParameter info what=output where=rawfile
+designParamVals info what=parameters where=rawfile
+primitives info what=primitives where=rawfile
+subckts info what=subckts where=rawfile
+save Q Q_NOT CLK D Q CLK MASTER_Q D CLK_NOT C0:1 C0:1 
+saveOptions options save=allpub

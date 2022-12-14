@@ -1,0 +1,17 @@
+Starting Single Run, Sweeps and Corners...
+
+Current time: Thu Dec  1 19:49:53 2022 
+Best design point: 1
+Design specs: 
+	Project:sim_X3NAND:1	corner	Nominal - 
+	TF		129.6p
+	TR		42.93p
+	PDF		144.3p
+	PDR		61.42p
+Design parameters: 
+
+Interactive.0
+Number of points completed: 1
+Number of simulation errors: 0
+Interactive.0 completed. 
+Current time: Thu Dec  1 19:49:56 2022 

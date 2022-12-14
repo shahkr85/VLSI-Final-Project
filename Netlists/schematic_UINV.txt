@@ -1,0 +1,43 @@
+// Point Netlist Generated on: Dec 14 00:38:00 2022
+// Generated for: spectre
+// Design Netlist Generated on: Dec 14 00:38:00 2022
+// Design library name: Project
+// Design cell name: schemSim_UINV
+// Design view name: schematic
+simulator lang=spectre
+global 0 vdd!
+include "/home/angelinic0/ncsu-cdk-1.6.0.beta/models/spectre/standalone/ami06N.m"
+include "/home/angelinic0/ncsu-cdk-1.6.0.beta/models/spectre/standalone/ami06P.m"
+
+// Library name: Project
+// Cell name: V_INV
+// View name: schematic
+subckt V_INV in out
+    N0 (out in 0 0) ami06N w=1.5u l=600n as=2.25e-12 ad=2.25e-12 ps=6u \
+        pd=6u m=1 region=sat
+    P0 (out in vdd! vdd!) ami06P w=3u l=600n as=4.5e-12 ad=4.5e-12 ps=9u \
+        pd=9u m=1 region=sat
+ends V_INV
+// End of subcircuit definition.
+
+// Library name: Project
+// Cell name: schemSim_UINV
+// View name: schematic
+I0 (in out) V_INV
+C0 (out 0) capacitor c=25.5927671f m=1
+include "./_graphical_stimuli.scs"
+simulatorOptions options psfversion="1.4.0" reltol=1e-3 vabstol=1e-6 \
+    iabstol=1e-12 temp=27 tnom=27 scalem=1.0 scale=1.0 gmin=1e-12 rforce=1 \
+    maxnotes=5 maxwarns=5 digits=5 cols=80 pivrel=1e-3 \
+    sensfile="../psf/sens.output" checklimitdest=psf 
+tran tran stop=4n write="spectre.ic" writefinal="spectre.fc" \
+    annotate=status maxiters=5 
+finalTimeOP info what=oppoint where=rawfile
+modelParameter info what=models where=rawfile
+element info what=inst where=rawfile
+outputParameter info what=output where=rawfile
+designParamVals info what=parameters where=rawfile
+primitives info what=primitives where=rawfile
+subckts info what=subckts where=rawfile
+save out in out in 
+saveOptions options save=allpub

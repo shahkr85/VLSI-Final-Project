@@ -1,0 +1,87 @@
+// Point Netlist Generated on: Dec 14 01:06:40 2022
+// Generated for: spectre
+// Design Netlist Generated on: Dec 14 01:06:40 2022
+// Design library name: Project
+// Design cell name: sim_X3NAND
+// Design view name: config
+simulator lang=spectre
+global 0 vdd!
+include "/home/angelinic0/ncsu-cdk-1.6.0.beta/models/spectre/standalone/ami06N.m"
+include "/home/angelinic0/ncsu-cdk-1.6.0.beta/models/spectre/standalone/ami06P.m"
+
+// Inherited view list: spectre cmos_sch cmos.sch schematic veriloga ahdl
+// pspice dspf
+// Library name: Project
+// Cell name: X_3NAND
+// View name: extracted
+// View type: maskLayout
+subckt X_3NAND A B C out
+    \+11 (vdd! C out vdd!) ami06P w=4.05e-06 l=6e-07 as=3.645e-12 \
+        ad=6.075e-12 ps=1.8e-06 pd=7.05e-06 m=1 region=sat
+    \+10 (out B vdd! vdd!) ami06P w=4.05e-06 l=6e-07 as=3.645e-12 \
+        ad=3.645e-12 ps=1.8e-06 pd=1.8e-06 m=1 region=sat
+    \+9 (vdd! A out vdd!) ami06P w=4.05e-06 l=6e-07 as=3.645e-12 \
+        ad=3.645e-12 ps=1.8e-06 pd=1.8e-06 m=1 region=sat
+    \+8 (out A vdd! vdd!) ami06P w=4.05e-06 l=6e-07 as=3.645e-12 \
+        ad=3.645e-12 ps=1.8e-06 pd=1.8e-06 m=1 region=sat
+    \+7 (vdd! B out vdd!) ami06P w=4.05e-06 l=6e-07 as=3.645e-12 \
+        ad=3.645e-12 ps=1.8e-06 pd=1.8e-06 m=1 region=sat
+    \+6 (out C vdd! vdd!) ami06P w=4.05e-06 l=6e-07 as=6.075e-12 \
+        ad=3.645e-12 ps=7.05e-06 pd=1.8e-06 m=1 region=sat
+    \+30 (C 0) capacitor c=1.53171e-15 m=1
+    \+29 (B 0) capacitor c=1.09647e-15 m=1
+    \+28 (A 0) capacitor c=6.6123e-16 m=1
+    \+27 (vdd! C) capacitor c=1.23876e-15 m=1
+    \+26 (vdd! B) capacitor c=8.0352e-16 m=1
+    \+25 (vdd! A) capacitor c=3.6828e-16 m=1
+    \+24 (vdd! C) capacitor c=4.434e-16 m=1
+    \+23 (vdd! B) capacitor c=4.434e-16 m=1
+    \+22 (out 0) capacitor c=3.11694e-15 m=1
+    \+21 (out C) capacitor c=2.217e-16 m=1
+    \+20 (out B) capacitor c=2.217e-16 m=1
+    \+19 (out A) capacitor c=2.217e-16 m=1
+    \+18 (out vdd!) capacitor c=1.21446e-15 m=1
+    \+17 (7 8) capacitor c=6.744e-16 m=1
+    \+16 (B 7) capacitor c=3.7008e-16 m=1
+    \+15 (A 8) capacitor c=3.7008e-16 m=1
+    \+14 (A 7) capacitor c=3.7008e-16 m=1
+    \+13 (out 8) capacitor c=3.372e-16 m=1
+    \+12 (out 7) capacitor c=3.372e-16 m=1
+    \+5 (0 C 7 0) ami06N w=6e-06 l=6e-07 as=5.4e-12 ad=9e-12 ps=1.8e-06 \
+        pd=9e-06 m=1 region=sat
+    \+4 (7 B 8 0) ami06N w=6e-06 l=6e-07 as=5.4e-12 ad=5.4e-12 ps=1.8e-06 \
+        pd=1.8e-06 m=1 region=sat
+    \+3 (8 A out 0) ami06N w=6e-06 l=6e-07 as=5.4e-12 ad=5.4e-12 \
+        ps=1.8e-06 pd=1.8e-06 m=1 region=sat
+    \+2 (out A 8 0) ami06N w=6e-06 l=6e-07 as=5.4e-12 ad=5.4e-12 \
+        ps=1.8e-06 pd=1.8e-06 m=1 region=sat
+    \+1 (8 B 7 0) ami06N w=6e-06 l=6e-07 as=5.4e-12 ad=5.4e-12 ps=1.8e-06 \
+        pd=1.8e-06 m=1 region=sat
+    \+0 (7 C 0 0) ami06N w=6e-06 l=6e-07 as=9e-12 ad=5.4e-12 ps=9e-06 \
+        pd=1.8e-06 m=1 region=sat
+ends X_3NAND
+// End of subcircuit definition.
+
+// Library name: Project
+// Cell name: sim_X3NAND
+// View name: schematic
+// Inherited view list: spectre cmos_sch cmos.sch schematic veriloga ahdl
+// pspice dspf
+I0 (A B C out) X_3NAND
+C0 (out 0) capacitor c=78.94299954f m=1
+include "./_graphical_stimuli.scs"
+simulatorOptions options psfversion="1.4.0" reltol=1e-3 vabstol=1e-6 \
+    iabstol=1e-12 temp=27 tnom=27 scalem=1.0 scale=1.0 gmin=1e-12 rforce=1 \
+    maxnotes=5 maxwarns=5 digits=5 cols=80 pivrel=1e-3 \
+    sensfile="../psf/sens.output" checklimitdest=psf 
+tran tran stop=8n write="spectre.ic" writefinal="spectre.fc" \
+    annotate=status maxiters=5 
+finalTimeOP info what=oppoint where=rawfile
+modelParameter info what=models where=rawfile
+element info what=inst where=rawfile
+outputParameter info what=output where=rawfile
+designParamVals info what=parameters where=rawfile
+primitives info what=primitives where=rawfile
+subckts info what=subckts where=rawfile
+save out A B C out C 
+saveOptions options save=allpub

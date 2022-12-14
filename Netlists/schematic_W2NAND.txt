@@ -1,0 +1,47 @@
+// Point Netlist Generated on: Dec 14 00:24:14 2022
+// Generated for: spectre
+// Design Netlist Generated on: Dec 14 00:23:57 2022
+// Design library name: Project
+// Design cell name: schemSim_W2NAND
+// Design view name: schematic
+simulator lang=spectre
+global 0 vdd!
+include "/home/angelinic0/ncsu-cdk-1.6.0.beta/models/spectre/standalone/ami06N.m"
+include "/home/angelinic0/ncsu-cdk-1.6.0.beta/models/spectre/standalone/ami06P.m"
+
+// Library name: Project
+// Cell name: W_2NAND
+// View name: schematic
+subckt W_2NAND A B out
+    P1 (out B vdd! vdd!) ami06P w=4.2u l=600n as=6.3e-12 ad=6.3e-12 \
+        ps=11.4u pd=11.4u m=1 region=sat
+    P0 (out A vdd! vdd!) ami06P w=4.2u l=600n as=6.3e-12 ad=6.3e-12 \
+        ps=11.4u pd=11.4u m=1 region=sat
+    N1 (net1 B 0 0) ami06N w=4.2u l=600n as=6.3e-12 ad=6.3e-12 ps=11.4u \
+        pd=11.4u m=1 region=sat
+    N0 (out A net1 0) ami06N w=4.2u l=600n as=6.3e-12 ad=6.3e-12 ps=11.4u \
+        pd=11.4u m=1 region=sat
+ends W_2NAND
+// End of subcircuit definition.
+
+// Library name: Project
+// Cell name: schemSim_W2NAND
+// View name: schematic
+I0 (A B out) W_2NAND
+C0 (out 0) capacitor c=40.46422502f m=1
+include "./_graphical_stimuli.scs"
+simulatorOptions options psfversion="1.4.0" reltol=1e-3 vabstol=1e-6 \
+    iabstol=1e-12 temp=27 tnom=27 scalem=1.0 scale=1.0 gmin=1e-12 rforce=1 \
+    maxnotes=5 maxwarns=5 digits=5 cols=80 pivrel=1e-3 \
+    sensfile="../psf/sens.output" checklimitdest=psf 
+tran tran stop=4n write="spectre.ic" writefinal="spectre.fc" \
+    annotate=status maxiters=5 
+finalTimeOP info what=oppoint where=rawfile
+modelParameter info what=models where=rawfile
+element info what=inst where=rawfile
+outputParameter info what=output where=rawfile
+designParamVals info what=parameters where=rawfile
+primitives info what=primitives where=rawfile
+subckts info what=subckts where=rawfile
+save out A B out A B 
+saveOptions options save=allpub

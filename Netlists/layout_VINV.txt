@@ -1,0 +1,52 @@
+// Point Netlist Generated on: Dec 14 01:16:21 2022
+// Generated for: spectre
+// Design Netlist Generated on: Dec 14 01:16:20 2022
+// Design library name: Project
+// Design cell name: sim_VINV
+// Design view name: config
+simulator lang=spectre
+global 0 vdd!
+include "/home/angelinic0/ncsu-cdk-1.6.0.beta/models/spectre/standalone/ami06N.m"
+include "/home/angelinic0/ncsu-cdk-1.6.0.beta/models/spectre/standalone/ami06P.m"
+
+// Inherited view list: spectre cmos_sch cmos.sch schematic veriloga ahdl
+// pspice dspf
+// Library name: Project
+// Cell name: V_INV
+// View name: extracted
+// View type: maskLayout
+subckt V_INV in out
+    \+1 (out in vdd! vdd!) ami06P w=3e-06 l=6e-07 as=4.5e-12 ad=4.5e-12 \
+        ps=6e-06 pd=6e-06 m=1 region=sat
+    \+5 (in 0) capacitor c=1.96695e-16 m=1
+    \+4 (in vdd!) capacitor c=1.71585e-16 m=1
+    \+3 (out 0) capacitor c=6.5646e-16 m=1
+    \+2 (out vdd!) capacitor c=4.0482e-16 m=1
+    \+0 (out in 0 0) ami06N w=1.5e-06 l=6e-07 as=2.25e-12 ad=2.25e-12 \
+        ps=4.5e-06 pd=4.5e-06 m=1 region=sat
+ends V_INV
+// End of subcircuit definition.
+
+// Library name: Project
+// Cell name: sim_VINV
+// View name: schematic
+// Inherited view list: spectre cmos_sch cmos.sch schematic veriloga ahdl
+// pspice dspf
+I0 (in out) V_INV
+C0 (out 0) capacitor c=16.5927671f m=1
+include "./_graphical_stimuli.scs"
+simulatorOptions options psfversion="1.4.0" reltol=1e-3 vabstol=1e-6 \
+    iabstol=1e-12 temp=27 tnom=27 scalem=1.0 scale=1.0 gmin=1e-12 rforce=1 \
+    maxnotes=5 maxwarns=5 digits=5 cols=80 pivrel=1e-3 \
+    sensfile="../psf/sens.output" checklimitdest=psf 
+tran tran stop=4n write="spectre.ic" writefinal="spectre.fc" \
+    annotate=status maxiters=5 
+finalTimeOP info what=oppoint where=rawfile
+modelParameter info what=models where=rawfile
+element info what=inst where=rawfile
+outputParameter info what=output where=rawfile
+designParamVals info what=parameters where=rawfile
+primitives info what=primitives where=rawfile
+subckts info what=subckts where=rawfile
+save out in out in 
+saveOptions options save=allpub
